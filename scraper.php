@@ -59,7 +59,8 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
   $page   = file_get_html($link);
   foreach($page->find("//[@id='tblExport']/tbody/tr")as $element)
   {
-    echo $element;
+      $code   = $element->find('td',0)->plaintext;
+      echo $code;
   }
 }
 
