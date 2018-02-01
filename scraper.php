@@ -2,7 +2,8 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
-$years	=	array('1972',
+$years	=	array('1972'
+                /*,
 '1973',
 '1974',
 '1975',
@@ -48,14 +49,17 @@ $years	=	array('1972',
 '2015',
 '2016',
 '2017',
-'2018',
+'2018',*/
 );
 
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
   $Mainpage	=	$years[$mainpage];
   $page   = 'http://202.61.43.40:8056/caselaw/rpt_search_simple.php?CASENO=&CASEYEAR='.$Mainpage.'&STD_CASETYPES=-1&STD_BENCHTYPES=-1&STD_COURTS=-1'; 
-  echo "$page\n";
+  forearch($page->find("//*[@id="tblExport"]/tbody/tr")as $element)
+  {
+    echo $element;
+  }
 }
 
 ?>
