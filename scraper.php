@@ -54,7 +54,8 @@ $years	=	array('1972',
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
   $Mainpage	=	$years[$mainpage];
-  echo "$Mainpage\n";
+  $page   = 'http://202.61.43.40:8056/caselaw/rpt_search_simple.php?CASENO=&CASEYEAR='.$Mainpage.'&STD_CASETYPES=-1&STD_BENCHTYPES=-1&STD_COURTS=-1'; 
+  echo "$page\n";
 }
 
 ?>
