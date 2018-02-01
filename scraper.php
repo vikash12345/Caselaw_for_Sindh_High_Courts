@@ -60,7 +60,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
   foreach($page->find("//[@id='tblExport']/tbody/tr")as $element)
   {
       $code   = $element->find('td',0)->plaintext;
-      echo $code;
+      echo "$code\n";
   }
 }
 
