@@ -3,7 +3,7 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
 $years	=	array('1972','1974'
-                /*,
+
 '1973',
 '1974',
 '1975',
@@ -49,7 +49,7 @@ $years	=	array('1972','1974'
 '2015',
 '2016',
 '2017',
-'2018',*/
+'2018'
 );
 
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
