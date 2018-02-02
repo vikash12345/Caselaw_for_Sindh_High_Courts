@@ -59,9 +59,11 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
   $link   = 'http://202.61.43.40:8056/caselaw/rpt_search_simple.php?CASENO=&CASEYEAR='.$Mainpage.'&STD_CASETYPES=-1&STD_BENCHTYPES=-1&STD_COURTS=-1'; 
   echo "$link\n";
   $page   = file_get_html($link);
-	sleep(50000);
+	
   foreach($page->find("//[@id='tblExport']/tbody/tr")as $element)
   {
+	  
+	  sleep(50000);
       $code          	= $element->find('td',0)->plaintext;
       $s            	= $element->find('td',1)->plaintext;
       $citation     	= $element->find('td',2)->plaintext;
