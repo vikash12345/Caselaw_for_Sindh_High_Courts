@@ -70,7 +70,8 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
       $afr          = $element->find('td',8)->plaintext;    
       $head   = $element->find('td',9)->plaintext;     
 
-    
+    if($code != null || $code != "")
+    {
     $record = array( 'code' =>$code, 
 		   's' => $s,
 		   'citation' => $citation, 
@@ -84,8 +85,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 						
 						
            scraperwiki::save(array('code','s','citation','case_no','case_year','parties','bench','order_date','afr','head'), $record);
-
-    
+    }
     
     
   }
