@@ -74,6 +74,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
       $jud_ordertwo  	= $element->find('td/a',1)->href;
     if($code != null || $code != "")
     {
+      echo "$link\n";
       $record = array( 'code' =>$code, 
 		   's' => $s,
 		   'citation' => $citation, 
