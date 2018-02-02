@@ -68,7 +68,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
       $bench        = $element->find('td',6)->plaintext;
       $order_date   = $element->find('td',7)->plaintext;
       $afr          = $element->find('td',8)->plaintext;    
-      $code   = $element->find('td',9)->plaintext;     
+      $head   = $element->find('td',9)->plaintext;     
 
     
     $record = array( 'code' =>$code, 
@@ -80,10 +80,10 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		   'bench' => $bench, 
 		   'order_date' => $order_date, 
 		   'afr' => $afr,
-		   'code' => $code);
+		   'head' => $head);
 						
 						
-           scraperwiki::save(array('code','s','citation','case_no','case_year','parties','bench','order_date','afr','code'), $record);
+           scraperwiki::save(array('code','s','citation','case_no','case_year','parties','bench','order_date','afr','head'), $record);
 
     
     
