@@ -70,7 +70,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
       $afr          	= $element->find('td',8)->plaintext;    
       $head  		= $element->find('td',9)->plaintext;     
       $judlink   	= $element->find('td/a',0)->href;  
-      $jud_order	=	'http://202.61.43.40:8056/caselaw/'.$judlink\n";
+      $jud_order	=	'http://202.61.43.40:8056/caselaw/'."$judlink\n";
     if($code != null || $code != "")
     {
     echo "$jud_order\n";
