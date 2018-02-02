@@ -69,7 +69,8 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
       $order_date   = $element->find('td',7)->plaintext;
       $afr          = $element->find('td',8)->plaintext;    
       $head   = $element->find('td',9)->plaintext;     
-
+      $jud_order   = $element->find('td/a',0)->href;  
+echo "$jud_order\n";
     if($code != null || $code != "")
     {
     $record = array( 'code' =>$code, 
