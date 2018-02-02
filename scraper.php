@@ -59,8 +59,35 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
   $page   = file_get_html($link);
   foreach($page->find("//[@id='tblExport']/tbody/tr")as $element)
   {
-      $code   = $element->find('td',0)->plaintext;
-      echo "$code\n";
+      $code          = $element->find('td',0)->plaintext;
+      $s            = $element->find('td',1)->plaintext;
+      $citation     = $element->find('td',2)->plaintext;
+      $case_no     = $element->find('td',3)->plaintext;
+      $case_year    = $element->find('td',4)->plaintext;
+      $parties      = $element->find('td',5)->plaintext;
+      $bench        = $element->find('td',6)->plaintext;
+      $order_date   = $element->find('td',7)->plaintext;
+      $afr          = $element->find('td',8)->plaintext;    
+      $code   = $element->find('td',9)->plaintext;     
+
+    
+    $record = array( 'code' =>$code, 
+		   's' => $s,
+		   'citation' => $citation, 
+		   'case_no' => $case_no, 
+		   'case_year' => $case_year, 
+		   'parties' => $parties, 
+		   'bench' => $bench, 
+		   'order_date' => $order_date, 
+		   'afr' => $afr,
+		   'code' => $code);
+						
+						
+           scraperwiki::save(array('code','s','citation','case_no','case_year','parties','bench','order_date','afr','code'), $record);
+
+    
+    
+    
   }
 }
 
