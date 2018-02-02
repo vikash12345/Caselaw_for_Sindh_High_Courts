@@ -2,9 +2,9 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
-$years	=	array('1972','1974'
-
+$years	=	array('1972',
 '1973',
+'1974',
 '1974',
 '1975',
 '1976',
