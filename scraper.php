@@ -55,7 +55,9 @@ $years	=	array('1972','1974'
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
   $Mainpage	=	$years[$mainpage];
+  
   $link   = 'http://202.61.43.40:8056/caselaw/rpt_search_simple.php?CASENO=&CASEYEAR='.$Mainpage.'&STD_CASETYPES=-1&STD_BENCHTYPES=-1&STD_COURTS=-1'; 
+  echo "$link\n";
   $page   = file_get_html($link);
   foreach($page->find("//[@id='tblExport']/tbody/tr")as $element)
   {
@@ -74,7 +76,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
       $jud_ordertwo  	= $element->find('td/a',1)->href;
     if($code != null || $code != "")
     {
-      echo "$link\n";
+      
       $record = array( 'code' =>$code, 
 		   's' => $s,
 		   'citation' => $citation, 
